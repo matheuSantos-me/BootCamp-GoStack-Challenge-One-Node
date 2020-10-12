@@ -105,7 +105,7 @@ describe("Repositories", () => {
         techs: ["Node", "Express", "TypeScript"]
       });
 
-    await request(app).delete(`/repositories/${response.body.id}`).expect(204);
+    await request(app).delete(`/repositories/${response.body.id}`).expect(200);
 
     const repositories = await request(app).get("/repositories");
 
